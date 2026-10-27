@@ -78,14 +78,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* hero */
 .hero{position:relative;background:var(--band);color:var(--band-ink)}
-.hero-photo{position:relative;aspect-ratio:16/8;max-height:620px;width:100%;overflow:hidden}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(18,17,16,0) 45%, var(--band) 100%)}
-.hero-text{position:relative;margin-top:-90px;padding-block:0 72px;display:grid;gap:22px}
-.hero h1{font-size:var(--step-3);max-width:14ch}
+.hero-photo{position:relative;aspect-ratio:21/9;max-height:560px;width:100%;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(18,17,16,0) 70%, var(--band) 100%)}
+.hero-text{position:relative;padding-block:40px 72px;display:grid;gap:22px}
+.hero h1{font-size:var(--step-3);max-width:22ch}
 .hero .lede{font-size:var(--step-1);color:var(--band-soft);max-width:36ch;line-height:1.45}
 .hero .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
-@media (max-width:640px){.hero-photo{aspect-ratio:4/3}.hero-text{margin-top:-40px}}
+@media (max-width:640px){.hero-photo{aspect-ratio:4/3}.hero-text{padding-block:28px 56px}}
 
 /* sections */
 section{padding-block:clamp(64px,9vw,112px)}
@@ -99,7 +99,9 @@ h2{font-size:var(--step-2)}
 .two{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px);align-items:center}
 .two > *{min-width:0}
 @media (max-width:820px){.two{grid-template-columns:1fr}}
-.photo{border-radius:3px;box-shadow:0 18px 40px -24px rgba(0,0,0,.45)}
+.photo{border-radius:3px;box-shadow:0 18px 40px -24px rgba(0,0,0,.45);width:100%;aspect-ratio:4/5;max-height:520px;object-fit:cover}
+.two{grid-template-columns:1fr 1fr}
+@media (max-width:820px){.two{grid-template-columns:1fr}.photo{aspect-ratio:4/3;max-height:none}}
 
 /* from / to ledger */
 .ledger{width:100%;border-collapse:collapse;margin-top:12px}
@@ -191,7 +193,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
         <p>It's a clarity problem. When you haven't settled who you are and what matters most, everything feels urgent. So you live in reaction mode, and the people you love get what's left of you.</p>
         <p>You don't need more productivity tips. You need one way of leading yourself that holds your faith, your family, and your business together.</p>
       </div>
-      <img class="photo" src="img/flipchart.jpg" alt="A handwritten flip chart from a Gen1 workshop headed Breakthrough" width="1000" height="1178" loading="lazy">
+      <img class="photo" style="object-position:50% 20%" src="img/flipchart.jpg" alt="A handwritten flip chart from a Gen1 workshop headed Breakthrough" width="1000" height="1178">
     </div>
   </section>
 
@@ -284,7 +286,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
 
   <section id="about">
     <div class="wrap two">
-      <img class="photo" src="img/family.jpg" alt="John with his three boys, all wearing oversized sunglasses" width="900" height="991" loading="lazy">
+      <img class="photo" style="object-position:50% 25%" src="img/family.jpg" alt="John with his three boys, all wearing oversized sunglasses" width="900" height="991">
       <div class="stack">
         <p class="eyebrow">About John</p>
         <h2>I'm a husband and a dad first.</h2>
